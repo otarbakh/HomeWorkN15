@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_circle_top"
+        android:layout_width="140dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="-35dp"
+        android:layout_marginTop="-45dp"
+        android:background="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_circle_bottom"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="-35dp"
+        android:layout_marginBottom="-45dp"
+        android:background="@drawable/circle"
+        android:rotation="-107.69"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_welcome"
+        style="@style/tv_top_text"
+        android:text="@string/register"
+        app:layout_constraintBottom_toTopOf="@+id/iv_mainBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_mainBackground"
+        android:layout_width="259dp"
+        android:layout_height="217dp"
+        android:src="@drawable/register"
+        app:layout_constraintBottom_toTopOf="@+id/et_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_email"
+        style="@style/btn_cyan_outline"
+        android:padding="10dp"
+        android:hint="email"
+        android:drawableStart="@drawable/mail"
+        app:layout_constraintBottom_toTopOf="@+id/et_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:drawablePadding="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_mainBackground" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_username"
+        style="@style/btn_cyan_outline"
+        android:hint="@string/username"
+        android:drawableStart="@drawable/ic_user"
+        android:padding="10dp"
+        android:drawablePadding="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_password"
+        style="@style/btn_cyan_outline"
+        android:drawableStart="@drawable/ic_pass"
+        android:drawablePadding="10dp"
+        android:hint="@string/password"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_username" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Register"
+        style="@style/btn_blue_outline"
+        android:text="@string/register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
